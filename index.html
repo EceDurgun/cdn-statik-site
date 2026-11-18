@@ -1,14 +1,317 @@
 
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDN Statik Site</title>
+    <meta name="description" content="CDN, içerik dağıtım ağları, önbellekleme ve Cloudflare Pages hakkında eğitim sitesi.">
+    <title>CDN Rehberi | İçerik Dağıtım Ağı</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Merhaba Dünya!</h1>
-    <p>Web sitem Cloudflare CDN üzerinden yayınlanıyor.</p>
+
+    <header class="header">
+        <div class="container nav">
+            <a href="#anasayfa" class="logo">
+                <span class="logo-icon">C</span>
+                CDN Rehberi
+            </a>
+
+            <nav>
+                <a href="#cdn">CDN Nedir?</a>
+                <a href="#nasil-calisir">Nasıl Çalışır?</a>
+                <a href="#onbellek">Önbellek</a>
+                <a href="#cloudflare">Cloudflare</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="anasayfa">
+            <div class="container hero-content">
+                <span class="eyebrow">İNTERNETİN DAĞITIM AĞI</span>
+
+                <h1>
+                    İnternet içerikleri
+                    <span>nasıl daha hızlı</span>
+                    ulaşır?
+                </h1>
+
+                <p>
+                    CDN teknolojisini, önbellekleme sistemini ve
+                    Cloudflare Pages ile statik site dağıtımını keşfet.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#cdn" class="btn btn-primary">
+                        CDN'yi Keşfet
+                    </a>
+                    <a href="#nasil-calisir" class="btn btn-outline">
+                        Nasıl Çalışır?
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="status-dot"></span>
+                    Statik web sitesi ve CDN eğitim projesi
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="cdn">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow dark">TEMEL KAVRAM</span>
+                    <h2>CDN Nedir?</h2>
+                    <p>
+                        CDN, Content Delivery Network ifadesinin
+                        kısaltmasıdır. Türkçede İçerik Dağıtım Ağı
+                        anlamına gelir.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🌐</div>
+                    <div>
+                        <h3>İçerik Dağıtım Ağı</h3>
+                        <p>
+                            CDN, web sitesi içeriklerinin farklı
+                            coğrafi bölgelerde bulunan sunucular
+                            üzerinden kullanıcılara ulaştırılmasını
+                            sağlayan dağıtık bir ağ sistemidir.
+                        </p>
+                        <p>
+                            Böylece içerikler kullanıcıya daha yakın
+                            noktalardan sunulabilir. Bu durum gecikmeyi
+                            azaltmaya ve ana sunucunun yükünü hafifletmeye
+                            yardımcı olur.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Daha hızlı erişim</h3>
+                        <p>
+                            Önbelleğe alınmış içerikler uygun durumlarda
+                            kullanıcıya yakın sunuculardan iletilir.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Dağıtık sunucular</h3>
+                        <p>
+                            İçerikler farklı bölgelerde bulunan
+                            CDN noktalarından sunulabilir.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3>Önbellekleme</h3>
+                        <p>
+                            Uygun içerikler geçici olarak saklanarak
+                            tekrar tekrar kaynak sunucuya gitme ihtiyacı
+                            azaltılabilir.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-dark" id="nasil-calisir">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">SİSTEMİN ÇALIŞMASI</span>
+                    <h2>CDN Nasıl Çalışır?</h2>
+                    <p>
+                        Kullanıcı bir web sitesine erişmek istediğinde
+                        istek CDN ağı üzerinden yönlendirilebilir.
+                    </p>
+                </div>
+
+                <div class="flow">
+                    <div class="flow-card">
+                        <span class="flow-number">01</span>
+                        <div class="flow-icon">👤</div>
+                        <h3>Kullanıcı</h3>
+                        <p>Web sitesine bir istek gönderir.</p>
+                    </div>
+
+                    <div class="flow-arrow">→</div>
+
+                    <div class="flow-card">
+                        <span class="flow-number">02</span>
+                        <div class="flow-icon">🌐</div>
+                        <h3>CDN noktası</h3>
+                        <p>İstenen içeriğin önbellekte olup olmadığı kontrol edilir.</p>
+                    </div>
+
+                    <div class="flow-arrow">→</div>
+
+                    <div class="flow-card">
+                        <span class="flow-number">03</span>
+                        <div class="flow-icon">🖥️</div>
+                        <h3>Kaynak sunucu</h3>
+                        <p>Gerekli olduğunda içerik kaynak sunucudan alınır.</p>
+                    </div>
+                </div>
+
+                <p class="flow-note">
+                    Not: Her istekte kaynak sunucuya gidilmez.
+                    Uygun ve önbellekte bulunan içerikler doğrudan CDN
+                    üzerinden sunulabilir.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="onbellek">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow dark">ÖNBELLEK SİSTEMİ</span>
+                    <h2>Cache HIT ve Cache MISS</h2>
+                    <p>
+                        CDN önbelleğinin çalışma durumunu HTTP yanıt
+                        başlıkları üzerinden inceleyebiliriz.
+                    </p>
+                </div>
+
+                <div class="cache-grid">
+                    <article class="cache-card hit">
+                        <div class="cache-label">CACHE HIT</div>
+                        <h3>İçerik bulundu</h3>
+                        <p>
+                            İstenen içerik önbellekte bulunduğunda
+                            CDN içeriği önbellekten sunabilir.
+                        </p>
+                        <div class="cache-result">Örnek: HIT</div>
+                    </article>
+
+                    <article class="cache-card miss">
+                        <div class="cache-label">CACHE MISS</div>
+                        <h3>İçerik bulunamadı</h3>
+                        <p>
+                            İstenen içerik önbellekte yoksa CDN,
+                            uygun durumda kaynak sunucuya başvurur.
+                        </p>
+                        <div class="cache-result">Örnek: MISS</div>
+                    </article>
+                </div>
+
+                <div class="code-card">
+                    <div class="code-title">
+                        <span class="terminal-dot"></span>
+                        HTTP Yanıt Başlığı
+                    </div>
+                    <pre><code>Cache-Control: public, max-age=3600
+CF-Cache-Status: HIT</code></pre>
+                    <p>
+                        CF-Cache-Status başlığı, Cloudflare'ın
+                        önbellek davranışını incelememizi sağlar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light" id="cloudflare">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow dark">UYGULAMALI PROJE</span>
+                    <h2>Cloudflare Pages ile Statik Site</h2>
+                    <p>
+                        Bu web sitesi GitHub ve Cloudflare Pages
+                        bağlantısı kullanılarak yayınlanmaktadır.
+                    </p>
+                </div>
+
+                <div class="steps">
+                    <div class="step">
+                        <span>01</span>
+                        <div>
+                            <h3>GitHub Repository</h3>
+                            <p>
+                                HTML, CSS ve diğer proje dosyaları
+                                GitHub deposunda saklanır.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span>02</span>
+                        <div>
+                            <h3>Cloudflare Pages</h3>
+                            <p>
+                                GitHub deposu Cloudflare Pages'e bağlanır.
+                                Değişiklikler otomatik dağıtılabilir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span>03</span>
+                        <div>
+                            <h3>Pull Request Preview</h3>
+                            <p>
+                                Yeni bir branch üzerinden PR açıldığında
+                                ayrı bir önizleme ortamı oluşturulur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <span>04</span>
+                        <div>
+                            <h3>Main Production</h3>
+                            <p>
+                                Değişiklikler main dalına birleştirildiğinde
+                                canlı site yeni sürümle güncellenir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="headers-card">
+                    <h3>_headers dosyası ne işe yarar?</h3>
+                    <p>
+                        Cloudflare Pages üzerinde statik dosyaların
+                        HTTP yanıt başlıklarını belirlemek için
+                        _headers dosyası kullanılabilir.
+                    </p>
+
+                    <pre><code>/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/style.css
+  Cache-Control: public, max-age=3600</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="closing">
+            <div class="container closing-content">
+                <span class="eyebrow">SONUÇ</span>
+                <h2>Hızlı, dağıtık ve akıllı içerik dağıtımı.</h2>
+                <p>
+                    CDN teknolojisi, modern web sitelerinin içeriklerini
+                    daha verimli şekilde kullanıcılara ulaştırmasına
+                    yardımcı olur.
+                </p>
+                <a href="#anasayfa" class="btn btn-primary">
+                    Sayfanın Başına Dön ↑
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <span>CDN Rehberi</span>
+            <span>GitHub + Cloudflare Pages Eğitim Projesi</span>
+        </div>
+    </footer>
+
 </body>
 </html>
